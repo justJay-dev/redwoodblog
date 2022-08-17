@@ -1,4 +1,5 @@
 import { render, screen } from '@redwoodjs/testing/web'
+
 import { Loading, Empty, Failure, Success } from './ArticleCell'
 import { standard } from './ArticleCell.mock'
 
@@ -35,7 +36,7 @@ describe('ArticleCell', () => {
 
   it('renders Success successfully', async () => {
     expect(() => {
-      render(<Success article={standard().article} />)
+      render(<Success article={standard().article} summary={false} />)
     }).not.toThrow()
   })
 })
